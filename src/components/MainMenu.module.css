@@ -1,0 +1,157 @@
+.menu {
+	padding: 3.2rem 2.4rem;
+}
+
+.menu__info h1 {
+	margin-bottom: 1.6rem;
+	color: var(--title);
+	font-size: 4rem;
+	font-weight: 300;
+	line-height: 100%;
+}
+
+.menu__info h1 > span {
+	display: block;
+	margin-top: 0.8rem;
+	font-weight: 500;
+}
+
+.menu__info p {
+	margin-bottom: 4rem;
+	color: var(--text);
+	font-size: 1.4rem;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 150%;
+}
+
+.menu__list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 100%;
+}
+
+.menu__list > li {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 12px;
+	background-color: var(--background);
+	border-radius: 12px;
+	box-shadow: 0px 16px 40px 0px var(--shadow);
+	cursor: pointer;
+}
+
+.menu__list > li div {
+	width: 40px;
+	height: 40px;
+	display: grid;
+	place-items: center;
+	border-radius: 6px;
+}
+
+.html {
+	background-color: #fff1e9;
+}
+
+.css {
+	background-color: #e0fdef;
+}
+
+.js {
+	background-color: #ebf0ff;
+}
+
+.access {
+	background-color: #f6e7ff;
+}
+
+.menu__list > li img {
+	width: 28.5px;
+	height: 28.5px;
+}
+
+.menu__list > li span {
+	color: var(--title);
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: 100%;
+}
+
+@media (min-width: 768px) {
+	.menu {
+		padding: 2.7rem 6.4rem 5.7rem;
+	}
+
+	.menu__info h1 {
+		font-size: 6.4rem;
+	}
+
+	.menu__info p {
+		margin-bottom: 6.4rem;
+		font-size: 2rem;
+	}
+
+	.menu__list {
+		gap: 24px;
+	}
+
+	.menu__list > li {
+		gap: 32px;
+	}
+
+	.menu__list > li div {
+		width: 56px;
+		height: 56px;
+		border-radius: 8px;
+	}
+
+	.menu__list > li img {
+		width: 40px;
+		height: 40px;
+	}
+
+	.menu__list > li span {
+		font-size: 2.8rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.menu {
+		padding: 4rem 6.4rem 4rem;
+	}
+
+	.menu__wrapper {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	.menu__info {
+		min-width: 465px;
+	}
+
+	.menu__info h1 {
+		margin-bottom: 4.8rem;
+	}
+
+	.menu__info p {
+		margin-bottom: 0;
+	}
+
+	.menu__list {
+		width: 100%;
+		max-width: 524px;
+	}
+
+	.menu__list > li img {
+		width: 40px;
+		height: 40px;
+	}
+
+	.menu__list > li span {
+		font-size: 2.8rem;
+	}
+}

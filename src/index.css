@@ -23,8 +23,100 @@ html {
 }
 
 body {
-	background-color: var(--light-grey);
+	min-height: 100vh;
 	font-family: 'Rubik', sans-serif;
 	font-size: 1.6rem;
-	min-height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.dark-theme {
+	--shadow: rgba(49, 62, 81, 0.14);
+	--background: var(--navy);
+	--text: var(--light-blue);
+	--title: var(--white);
+	--main-background: var(--dark-navy);
+	background-color: var(--main-background);
+	background-image: url('../src/assets/pattern-background-mobile-dark.svg');
+}
+
+.light-theme {
+	--shadow: rgba(143, 160, 193, 0.14);
+	--background: var(--white);
+	--text: var(--grey-navy);
+	--title: var(--dark-navy);
+	--main-background: var(--very-light-blue);
+	background-color: var(--main-background);
+	background-image: url('../src/assets/pattern-background-mobile-light.svg');
+}
+
+@media (min-width: 768px) {
+	body.dark-theme {
+		background-image: url('../src/assets/pattern-background-tablet-dark.svg');
+	}
+	body.light-theme {
+		background-image: url('../src/assets/pattern-background-tablet-light.svg');
+	}
+}
+
+@media (min-width: 992px) {
+	body.dark-theme {
+		background-image: url('../src/assets/pattern-background-desktop-dark.svg');
+	}
+	body.light-theme {
+		background-image: url('../src/assets/pattern-background-desktop-light.svg');
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: var(--main-background);
+		background-image: url('../src/assets/pattern-background-mobile-dark.svg');
+	}
+
+	@media (min-width: 768px) {
+		body {
+			background-image: url('../src/assets/pattern-background-tablet-dark.svg');
+		}
+	}
+
+	@media (min-width: 992px) {
+		body {
+			background-image: url('../src/assets/pattern-background-desktop-dark.svg');
+		}
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--dark-navy: #313e51;
+		--grey-navy: #626c7f;
+
+		--shadow: rgba(143, 160, 193, 0.14);
+		--background: #fff;
+		--text: #626c7f;
+		--title: #313e51;
+		--main-background: #f4f6fa;
+		--white: #ffffff;
+		--purple: #a729f5;
+		--green: #26d782;
+		--red: #ee5454;
+	}
+
+	body {
+		background-color: var(--main-background);
+		background-image: url('../src/assets/pattern-background-mobile-light.svg');
+	}
+
+	@media (min-width: 768px) {
+		body {
+			background-image: url('../src/assets/pattern-background-tablet-light.svg');
+		}
+	}
+
+	@media (min-width: 992px) {
+		body {
+			background-image: url('../src/assets/pattern-background-desktop-light.svg');
+		}
+	}
 }
