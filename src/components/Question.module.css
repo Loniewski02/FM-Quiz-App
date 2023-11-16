@@ -1,0 +1,70 @@
+.info p {
+	margin-bottom: 1.2rem;
+	color: var(--text);
+	font-size: 1.4rem;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 150%;
+}
+
+.info h2 {
+	color: var(--title);
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 120%;
+}
+
+.timer {
+	margin: 2.4rem 0 4rem;
+	padding: 0.4rem;
+	width: 100%;
+	height: 16px;
+	background-color: var(--background);
+	border-radius: 1em;
+}
+
+.timer > span {
+	display: block;
+	height: 8px;
+	animation: timer 30s linear forwards;
+	background-color: var(--purple);
+	border-radius: 1em;
+}
+
+
+@media (min-width: 768px) {
+	.info p {
+		margin-bottom: 2.7rem;
+		font-size: 2rem;
+	}
+
+	.info h2 {
+		font-size: 3.6rem;
+	}
+
+	.timer {
+		margin: 4rem 0 6.4rem;
+		padding: 0.4rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.info {
+		position: relative;
+	}
+
+	.timer {
+		position: absolute;
+		bottom: 14.5%;
+		margin: 0;
+	}
+}
+
+@keyframes timer {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}

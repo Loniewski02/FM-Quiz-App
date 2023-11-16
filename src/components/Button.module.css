@@ -1,0 +1,80 @@
+.button {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 12px;
+	color: var(--title);
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: 100%;
+	background-color: var(--background);
+	border-radius: 12px;
+	box-shadow: 0px 16px 40px 0px var(--shadow);
+	border: none;
+	cursor: pointer;
+}
+
+.button.submit {
+	padding: 1.2rem;
+	display: flex;
+	justify-content: center;
+	background-color: var(--purple);
+	color: var(--white);
+	height: 56px;
+}
+
+.button > div {
+	width: 40px;
+	height: 40px;
+	display: grid;
+	place-items: center;
+	border-radius: 6px;
+}
+
+.button > div.HTML {
+	background-color: #fff1e9;
+}
+
+.button > div.CSS {
+	background-color: #e0fdef;
+}
+
+.button > div.Javascript {
+	background-color: #ebf0ff;
+}
+
+.button > div.Accessibility {
+	background-color: #f6e7ff;
+}
+
+.button > div.letter {
+	background-color: var(--very-light-blue);
+	color: var(--grey-navy);
+}
+
+.button > div img {
+	width: 28.5px;
+	height: 28.5px;
+}
+
+@media (min-width: 768px) {
+	.button {
+		gap: 32px;
+		font-size: 2rem;
+	}
+
+	.button > div {
+		width: 56px;
+		height: 56px;
+		border-radius: 8px;
+	}
+
+	.button > div img {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+@media (min-width: 992px) {
+}

@@ -1,16 +1,19 @@
-import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+
+import { useAppSelector } from '../hooks/hooks';
 
 import Wrapper from './Wrapper';
-import styles from './Nav.module.css';
 
 import sunIcoLight from '../assets/icon-sun-light.svg';
 import sunIcoDark from '../assets/icon-sun-dark.svg';
 import moonIcoDark from '../assets/icon-moon-dark.svg';
 import moonIcoLight from '../assets/icon-moon-light.svg';
+import styles from './Nav.module.css';
 
 const Nav: React.FC = () => {
 	const [isDark, setIsDark] = useState<boolean>(document.body.classList.contains('dark-theme'));
+	const { name, icon } = useAppSelector((state) => state.game);
 
 	useEffect(() => {
 		setIsDark(document.body.classList.contains('dark-theme'));
@@ -26,14 +29,21 @@ const Nav: React.FC = () => {
 		<nav className={styles.nav}>
 			<Wrapper className={styles.nav__wrapper}>
 				<div className={styles.nav__name}>
-					<img
-						src={isDark ? sunIcoLight : sunIcoDark}
-						alt=''
-					/>
+					{name !== '' && (
+						<>
+							<div className={styles[name]}>
+								<img
+									src={icon}
+									alt={name}
+								/>
+							</div>
+							<span>{name}</span>
+						</>
+					)}
 				</div>
 				<div className={styles.nav__toggler}>
 					<img
-						src={isDark ? sunIcoLight : sunIcoDark}
+						src={isDark ? sunIcoDark : sunIcoLight}
 						alt=''
 					/>
 					<button
@@ -44,7 +54,7 @@ const Nav: React.FC = () => {
 							animate={{ x: isDark ? '100%' : 0 }}></motion.span>
 					</button>
 					<img
-						src={isDark ? moonIcoLight : moonIcoDark}
+						src={isDark ? moonIcoDark : moonIcoLight}
 						alt=''
 					/>
 				</div>

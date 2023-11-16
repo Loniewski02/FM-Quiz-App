@@ -1,8 +1,11 @@
 import { useEffect } from 'react';
 import MainMenu from './components/MainMenu';
 import Nav from './components/Nav';
+import Question from './components/Question';
+import { useAppSelector } from './hooks/hooks';
 
 const App: React.FC = () => {
+	const { isStarted } = useAppSelector((state) => state.game);
 	useEffect(() => {
 		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 			document.body.classList.add('dark-theme');
@@ -14,7 +17,8 @@ const App: React.FC = () => {
 	return (
 		<main>
 			<Nav />
-			<MainMenu />
+			{!isStarted && <MainMenu />}
+			{isStarted && <Question></Question>}
 		</main>
 	);
 };
