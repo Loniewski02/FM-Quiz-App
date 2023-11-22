@@ -26,7 +26,6 @@
 .timer > span {
 	display: block;
 	height: 8px;
-	animation: timer 30s linear forwards;
 	background-color: var(--purple);
 	border-radius: 1em;
 }
@@ -57,14 +56,5 @@
 		position: absolute;
 		bottom: 14.5%;
 		margin: 0;
-	}
-}
-
-@keyframes timer {
-	from {
-		width: 0;
-	}
-	to {
-		width: 100%;
 	}
 }

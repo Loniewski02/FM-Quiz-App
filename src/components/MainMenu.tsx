@@ -1,6 +1,3 @@
-import { useAppDispatch } from '../hooks/hooks';
-import { gameActions } from '../store/game-slice';
-
 import Section from './Section';
 import Button from './Button';
 import Choices from './Choices';
@@ -17,11 +14,9 @@ const OPTIONS: { id: number; ico: string; name: string }[] = [
 	{ id: 3, ico: jsIco, name: 'Javascript' },
 	{ id: 4, ico: accessibilityIco, name: 'Accessibility' },
 ];
-const MainMenu: React.FC = () => {
-	const dispatch = useAppDispatch();
-
+const MainMenu: React.FC<{ onStartGame: (name: string, icon: string) => void }> = (props) => {
 	const quizHandler = (name: string, icon: string) => {
-		dispatch(gameActions.startGame({ name: name, icon: icon }));
+		props.onStartGame(name, icon);
 	};
 
 	return (

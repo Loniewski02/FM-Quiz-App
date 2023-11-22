@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-import { useAppSelector } from '../hooks/hooks';
-
 import Wrapper from './Wrapper';
 
 import sunIcoLight from '../assets/icon-sun-light.svg';
@@ -11,9 +9,13 @@ import moonIcoDark from '../assets/icon-moon-dark.svg';
 import moonIcoLight from '../assets/icon-moon-light.svg';
 import styles from './Nav.module.css';
 
-const Nav: React.FC = () => {
+type Props = {
+	name: string;
+	icon: string;
+};
+
+const Nav: React.FC<Props> = (props) => {
 	const [isDark, setIsDark] = useState<boolean>(document.body.classList.contains('dark-theme'));
-	const { name, icon } = useAppSelector((state) => state.game);
 
 	useEffect(() => {
 		setIsDark(document.body.classList.contains('dark-theme'));
@@ -29,15 +31,15 @@ const Nav: React.FC = () => {
 		<nav className={styles.nav}>
 			<Wrapper className={styles.nav__wrapper}>
 				<div className={styles.nav__name}>
-					{name !== '' && (
+					{props.name !== '' && (
 						<>
-							<div className={styles[name]}>
+							<div className={styles[props.name]}>
 								<img
-									src={icon}
-									alt={name}
+									src={props.icon}
+									alt={props.name}
 								/>
 							</div>
-							<span>{name}</span>
+							<span>{props.name}</span>
 						</>
 					)}
 				</div>
@@ -51,7 +53,7 @@ const Nav: React.FC = () => {
 						onClick={themeHandler}>
 						<motion.span
 							initial={{ y: '-50%' }}
-							animate={{ x: isDark ? '100%' : 0 }}></motion.span>
+							animate={{ x: isDark ? 0 : '100%' }}></motion.span>
 					</button>
 					<img
 						src={isDark ? moonIcoDark : moonIcoLight}
