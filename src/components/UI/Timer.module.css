@@ -1,0 +1,28 @@
+.timer {
+	margin: 2.4rem 0 4rem;
+	padding: 0.4rem;
+	width: 100%;
+	height: 16px;
+	background-color: var(--background);
+	border-radius: 1em;
+}
+
+.timer > span {
+	display: block;
+	height: 8px;
+	background-color: var(--purple);
+	border-radius: 1em;
+}
+
+@media (min-width: 768px) {
+	.timer {
+		margin: 4rem 0 6.4rem;
+		padding: 0.4rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.timer {
+		margin-top: 4rem;
+	}
+}

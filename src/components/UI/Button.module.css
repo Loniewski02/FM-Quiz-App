@@ -1,0 +1,106 @@
+.button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 12px;
+	width: 100%;
+	color: var(--title);
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: 100%;
+	text-align: left;
+	background-color: var(--background);
+	border-radius: 12px;
+	box-shadow: 0px 16px 40px 0px var(--shadow);
+	border: 3px solid transparent;
+	cursor: pointer;
+}
+
+.button:hover {
+	opacity: 0.9;
+}
+
+.button:disabled {
+	cursor: not-allowed;
+}
+
+.button.submit {
+	padding: 1.2rem;
+	display: flex;
+	justify-content: center;
+	background-color: var(--purple);
+	color: var(--white);
+	height: 56px;
+}
+
+.button.selected {
+	border: 3px solid var(--purple);
+}
+
+.button.selected .letter {
+	background-color: var(--purple);
+	color: var(--title);
+}
+
+.button.selected {
+	border: 3px solid var(--purple);
+}
+
+.button.incorrect {
+	border: 3px solid var(--red);
+}
+
+.button.incorrect .letter {
+	background-color: var(--red);
+	color: var(--title);
+}
+
+.button.incorrect img.img--incorrect {
+	display: block;
+}
+
+.button.selected-correct {
+	border: 3px solid var(--green);
+}
+
+.button.selected-correct .letter {
+	background-color: var(--green);
+	color: var(--title);
+}
+
+.button.correct > img.img--correct,
+.button.selected-correct > img.img--correct {
+	display: block;
+}
+
+.letter {
+	width: 40px;
+	height: 40px;
+	display: grid;
+	place-items: center;
+	border-radius: 6px;
+	background-color: var(--very-light-blue);
+	color: var(--grey-navy);
+}
+
+.button > img {
+	position: absolute;
+	top: 50%;
+	right: 12px;
+	transform: translateY(-50%);
+	display: none;
+	z-index: 30;
+}
+
+@media (min-width: 768px) {
+	.button {
+		font-size: 2rem;
+	}
+
+	.letter {
+		width: 56px;
+		height: 56px;
+	}
+}

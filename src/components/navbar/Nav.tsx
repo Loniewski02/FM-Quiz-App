@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-import Wrapper from './Wrapper';
+import Wrapper from '../layout/Wrapper';
+import Title from '../UI/Title';
 
-import sunIcoLight from '../assets/icon-sun-light.svg';
-import sunIcoDark from '../assets/icon-sun-dark.svg';
-import moonIcoDark from '../assets/icon-moon-dark.svg';
-import moonIcoLight from '../assets/icon-moon-light.svg';
+import sunIcoLight from '../../assets/icon-sun-light.svg';
+import sunIcoDark from '../../assets/icon-sun-dark.svg';
+import moonIcoDark from '../../assets/icon-moon-dark.svg';
+import moonIcoLight from '../../assets/icon-moon-light.svg';
 import styles from './Nav.module.css';
 
 type Props = {
-	name: string;
+	title: string;
 	icon: string;
 };
 
@@ -30,17 +31,12 @@ const Nav: React.FC<Props> = (props) => {
 	return (
 		<nav className={styles.nav}>
 			<Wrapper className={styles.nav__wrapper}>
-				<div className={styles.nav__name}>
-					{props.name !== '' && (
-						<>
-							<div className={styles[props.name]}>
-								<img
-									src={props.icon}
-									alt={props.name}
-								/>
-							</div>
-							<span>{props.name}</span>
-						</>
+				<div className={styles.nav__title}>
+					{props.title !== '' && (
+						<Title
+							title={props.title}
+							icon={props.icon}
+						/>
 					)}
 				</div>
 				<div className={styles.nav__toggler}>

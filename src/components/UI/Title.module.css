@@ -1,0 +1,58 @@
+.title {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.title > div {
+	width: 40px;
+	height: 40px;
+	display: grid;
+	place-items: center;
+	border-radius: 6px;
+}
+
+.HTML {
+	background-color: #fff1e9;
+}
+
+.CSS {
+	background-color: #e0fdef;
+}
+
+.Javascript {
+	background-color: #ebf0ff;
+}
+
+.Accessibility {
+	background-color: #f6e7ff;
+}
+
+.title img {
+	width: 28.5px;
+	height: 28.5px;
+}
+
+.title span {
+	color: var(--title);
+	font-weight: 500;
+	font-size: inherit;
+	line-height: 100%;
+}
+
+@media (min-width: 768px) {
+	.title {
+		gap: 32px;
+	}
+
+	.title div {
+		width: 56px;
+		height: 56px;
+		border-radius: 8px;
+	}
+
+	.title img {
+		width: 40px;
+		height: 40px;
+	}
+}
