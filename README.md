@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screensScreenshot_1.png)
+![](./screens/Screenshot_1.png)
 ![](./screens/Screenshot_2.png)
 
 ### Links
