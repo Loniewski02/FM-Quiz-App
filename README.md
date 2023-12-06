@@ -33,7 +33,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screensScreenshot_1.png)
+![](./screens/Screenshot_2.png)
 
 ### Links
 
@@ -49,6 +50,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+- Vite
 
 ## Author
 
