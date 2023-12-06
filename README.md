@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/frontend-quiz-app-nkODl-QplE](https://www.frontendmentor.io/solutions/frontend-quiz-app-nkODl-QplE)
 - Live Site URL: [https://fm-quiz-app-woad.vercel.app/](https://fm-quiz-app-woad.vercel.app/)
 
 ## My process
